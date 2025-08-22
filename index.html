@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kadiyala Komali | AI Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          animation: { fadeIn: 'fadeIn 1.2s ease-in-out both' },
+          keyframes: {
+            fadeIn: { '0%': {opacity:0, transform:'translateY(6px)'}, '100%': {opacity:1, transform:'translateY(0)'} }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Subtle 3D hover */
+    .tilt { transform-style: preserve-3d; perspective: 800px; }
+    .tilt:hover .tilt-child { transform: translateZ(12px); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans dark:bg-gray-950 dark:text-gray-100">
+
+  <!-- Header -->
+  <header class="p-5 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur z-50 shadow flex justify-between items-center">
+    <a href="#home" class="text-xl md:text-2xl font-extrabold tracking-tight hover:text-indigo-500 transition">Kadiyala Komali</a>
+    <nav class="hidden md:flex items-center gap-5">
+      <a href="#home" class="hover:text-indigo-500">Home</a>
+      <a href="#about" class="hover:text-indigo-500">About</a>
+      <a href="#education" class="hover:text-indigo-500">Education</a>
+      <a href="#skills" class="hover:text-indigo-500">Skills</a>
+      <a href="#experience" class="hover:text-indigo-500">Experience</a>
+      <a href="#projects" class="hover:text-indigo-500">Projects</a>
+      <a href="#certificates" class="hover:text-indigo-500">Certificates</a>
+      <a href="#achievements" class="hover:text-indigo-500">Achievements</a>
+      <a href="#activities" class="hover:text-indigo-500">Activities</a>
+      <a href="#contact" class="hover:text-indigo-500">Contact</a>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="ml-2 px-3 py-1 border rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition">🌓</button>
+    </nav>
+    <!-- Mobile menu -->
+    <button id="menuBtn" class="md:hidden px-3 py-2 border rounded">☰</button>
+  </header>
+  <div id="mobileMenu" class="md:hidden hidden px-5 pb-4 bg-white dark:bg-gray-900 shadow">
+    <div class="flex flex-wrap gap-3">
+      <a href="#home" class="hover:text-indigo-500">Home</a>
+      <a href="#about" class="hover:text-indigo-500">About</a>
+      <a href="#education" class="hover:text-indigo-500">Education</a>
+      <a href="#skills" class="hover:text-indigo-500">Skills</a>
+      <a href="#experience" class="hover:text-indigo-500">Experience</a>
+      <a href="#projects" class="hover:text-indigo-500">Projects</a>
+      <a href="#certificates" class="hover:text-indigo-500">Certificates</a>
+      <a href="#achievements" class="hover:text-indigo-500">Achievements</a>
+      <a href="#activities" class="hover:text-indigo-500">Activities</a>
+      <a href="#contact" class="hover:text-indigo-500">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="text-center py-14 animate-fadeIn">
+    <img src="profile.jpg" alt="Komali Kadiyala" class="w-40 h-40 rounded-full mx-auto border-4 border-indigo-600 mb-4 shadow-lg object-cover">
+    <!-- TODO: replace profile.jpg with your actual image path -->
+
+    <h1 class="text-4xl md:text-5xl font-extrabold">Kadiyala Komali</h1>
+    <p class="text-lg mt-2">Final-Year B.Tech CSE (AI) | AI Engineer | Data Scientist | Developer</p>
+    <p class="max-w-2xl mx-auto mt-3 text-gray-600 dark:text-gray-300">
+      Proactive and passionate final-year CSE (AI) student with strong expertise in AIML & DL. Skilled in Python, SQL, and data visualization with hands-on experience in real-time projects and hackathons. A proven leader and problem-solver, eager to work with cutting-edge AI teams and contribute to impactful technology innovations.
+    </p>
+    <div class="mt-6 flex items-center justify-center gap-3">
+      <a href="resume.pdf" download class="tilt inline-block">
+        <!-- TODO: put your resume file at /resume.pdf -->
+        <span class="tilt-child inline-block bg-indigo-600 text-white px-6 py-2 rounded-xl hover:bg-indigo-700 transition shadow-soft">⬇ Download Resume</span>
+      </a>
+      
+    </div>
+    <div class="mt-6 flex items-center justify-center gap-5">
+      <!-- Socials -->
+      <a class="group" href="https://github.com/KadiyalaKomali" target="_blank" rel="noreferrer">
+        <!-- TODO: Add GitHub link -->
+        <span class="inline-flex items-center gap-2 px-3 py-1 border rounded-lg group-hover:scale-[1.03] transition">🐙 GitHub</span>
+      </a>
+      <a class="group" href="https://www.linkedin.com/in/komali-kadiyala-ainrtec22471a4325/" target="_blank" rel="noreferrer">
+        <!-- TODO: Add LinkedIn link -->
+        <span class="inline-flex items-center gap-2 px-3 py-1 border rounded-lg group-hover:scale-[1.03] transition">💼 LinkedIn</span>
+      </a>
+      
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-12 px-5 text-center bg-gray-50 dark:bg-gray-900">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="max-w-3xl mx-auto">
+      I’m Komali, passionate about building real-world solutions across Deep Learning, NLP, Computer Vision, and Web Technologies. I enjoy collaborating, leading teams, and exploring emerging technologies.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-12 px-5">
+    <h2 class="text-3xl font-semibold text-center mb-8">Education</h2>
+    <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-3">
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft tilt">
+        <div class="tilt-child">
+          <h3 class="font-bold text-lg">B.Tech (2022–2026)</h3>
+          <p class="text-indigo-600 font-semibold">81%</p>
+          <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Narasaraopeta Engineering College</p>
+        </div>
+      </div>
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft tilt">
+        <div class="tilt-child">
+          <h3 class="font-bold text-lg">Intermediate (2020–2022)</h3>
+          <p class="text-indigo-600 font-semibold">91%</p>
+          <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Matrix IIT Academy, Guntur</p>
+        </div>
+      </div>
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft tilt">
+        <div class="tilt-child">
+          <h3 class="font-bold text-lg">SSC (2020)</h3>
+          <p class="text-indigo-600 font-semibold">100%</p>
+          <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Oxford IIT Concept School, Narasaraopet</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-12 px-5">
+    <h2 class="text-3xl font-semibold text-center mb-8">Skills</h2>
+
+    <!-- Programming Languages -->
+    <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">🖥 Programming Languages</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="python.png" label="Python (ML, DL, AI, NLP, DS, DSA)"></Skill>
+        <Skill icon="java.png" label="Java (Android Dev)"></Skill>
+        <Skill icon="cp.png" label="C (Core)"></Skill>
+        <Skill icon="sql.png" label="SQL (PostgreSQL, MySQL)"></Skill>
+        <Skill icon="javascript.png" label="JavaScript"></Skill>
+        <Skill icon="htmlcss.jpeg" label="HTML5 & CSS3"></Skill>
+      </div>
+    </div>
+
+    <!-- ML & DS -->
+     <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">📊 Machine Learning & Data Science</h3>
+      <div class="grid md:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+       <Skill icon="supervisedlearning.png"  label="Supervised: Linear/Logistic Regression, Decision Trees, Random Forest, SVM, KNN">    </Skill>
+        <Skill icon="unsupervisedlearning.jpeg"  label="Unsupervised: KMeans, Hierarchical Clustering"></Skill>
+        <Skill icon="deeplearning.png" label="Deep Learning: Neural Nets, RNN, LSTM, CNN"></Skill>
+        <Skill icon="preprocessing.png" label="Preprocessing & Features: NumPy, Pandas, Scikit-learn"></Skill>
+        <Skill icon="evaluation.png" label="Evaluation: Confusion Matrix, ROC, Cross-Validation"></Skill>
+        <Skill icon="visualization.png" label="Visualization: Matplotlib, Seaborn, Plotly"></Skill>
+      </div>
+    </div>
+
+
+    <!-- Deep Learning & AI -->
+    <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">🤖 Deep Learning & AI</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="tensorflow.png" label="TensorFlow"></Skill>
+        <Skill icon="keras.png" label="Keras"></Skill>
+        <Skill icon="pytorch.png" label="PyTorch"></Skill>
+        <Skill icon="opencv.png" label="OpenCV"></Skill>
+        <Skill icon="yolo.jpeg" label="YOLO Models"></Skill>
+      </div>
+    </div>
+
+    <!-- NLP -->
+    <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">🗣 Natural Language Processing (NLP)</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="nltk.png" label="NLTK"></Skill>
+        <Skill icon="textblob.png" label="TextBlob"></Skill>
+        <Skill icon="transformer.png" label="Transformers (HF)"></Skill>
+        <Skill icon="whisper.png" label="Speech-to-Text (Whisper)"></Skill>
+        <Skill icon="sentimentanalysis.jpeg" label="Sentiment Analysis"></Skill>
+      </div>
+    </div>
+
+    <!-- Android & Web -->
+    <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">📱 Android & Web Development</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="androidstudio.png" label="Android Studio"></Skill>
+        <Skill icon="java.png" label="Java (Android)"></Skill>
+        <Skill icon="xml.png" label="XML (UI)"></Skill>
+        <Skill icon="fastapi.png" label="FastAPI"></Skill>
+        <Skill icon="postgremysql.png" label="PostgreSQL/MySQL"></Skill>
+        <Skill icon="streamlit.png" label="Streamlit"></Skill>
+        <Skill icon="htmlcss.jpeg" label="CSS"></Skill>
+        <Skill icon="javascript.png" label="JavaScript"></Skill>
+        <Skill icon="htmlcss.jpeg" label="HTML"></Skill>
+        <Skill icon="reactjs.png" label="ReactJS"></Skill>
+      </div>
+    </div>
+
+    <!-- Cybersecurity -->
+    <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">🔐 Cybersecurity</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="cybersecurity.jpeg" label="System Monitoring & Logging"></Skill>
+        
+      </div>
+    </div>
+
+    <!-- Cloud & Deployment -->
+    <div class="max-w-6xl mx-auto mb-8">
+      <h3 class="text-xl font-semibold mb-3">☁ Cloud & Deployment</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="vercel.png" label="Vercel"></Skill>
+        <Skill icon="postgresql.png" label="PostgreSQL Cloud (Supabase/Neon/ElephantSQL)"></Skill>
+        <Skill icon="docker.png" label="Docker & Compose"></Skill>
+        <Skill icon="github.png" label="Git & GitHub"></Skill>
+      </div>
+    </div>
+
+    <!-- Tools & Other Skills -->
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-xl font-semibold mb-3">🎨 Tools & Other Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <Skill icon="vscode.jpeg" label="VS Code"></Skill>
+        <Skill icon="jupyter.png" label="Jupyter / Colab"></Skill>
+        <Skill icon="canva.jpeg" label="Canva"></Skill>
+        <Skill icon="teamleader.png" label="Team Leadership"></Skill>
+      </div>
+      <!-- TODO: Upload/replace icons as needed -->
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-12 px-5 bg-gray-50 dark:bg-gray-900">
+    <h2 class="text-3xl font-semibold text-center mb-8">Experience</h2>
+    <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-2">
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-800 dark:border-gray-700 shadow-soft">
+        <h3 class="font-bold text-lg">Data Valley – Data Analytics with AI (Internship)</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Worked with real-world datasets, performed EDA, built ML models (Heart Disease, Car Price Prediction, Student Dropout Risk, Stock Forecasting).</p>
+      </div>
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-800 dark:border-gray-700 shadow-soft">
+        <h3 class="font-bold text-lg">Supraja Technologies – Cybersecurity (Internship)</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Tools: HTTrack, VirtualBox (Kali Linux), Metasploit. Developed Webcam Spyware Security Tool with file/link scanning APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <id="projects" class="py-12 px-5">
+    <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+    <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Project Card Template -->
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Bitcoin Price Prediction</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Forecast Bitcoin prices using ML & LSTM. Includes preprocessing, feature engineering, and trend visualization.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>Pandas</Badge><Badge>NumPy</Badge><Badge>Sklearn</Badge><Badge>TensorFlow/Keras (LSTM)</Badge><Badge>Matplotlib</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/bitcoin-price-prediction" target="_blank">View Project</a>
+        <!-- TODO: Update GitHub link -->
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Education Dropout Predictor (EduDropout)</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Predict student dropout probability using academic & socio-economic features; evaluates with Accuracy/Precision/Recall.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>Pandas</Badge><Badge>Logistic Regression</Badge><Badge>Decision Trees</Badge><Badge>Random Forest</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/EduDropout-Predictor" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Heart Disease Risk Predictor</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Assesses heart disease risk using clinical & lifestyle data; compares multiple ML models for reliability.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>Sklearn</Badge><Badge>Logistic Regression</Badge><Badge>Random Forest</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/heart-disease-risk-predictor" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Car Evaluation System</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Classifies cars into categories (acceptable → very good) using supervised learning on benchmark datasets.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>Pandas</Badge><Badge>Decision Trees</Badge><Badge>SVM</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/car-evaluation-app" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Amazon Reviews Sentiment Analysis</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Classifies reviews as positive/negative with NLTK & TF-IDF; includes WordCloud visualizations.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>NLTK</Badge><Badge>Sklearn</Badge><Badge>TF-IDF</Badge><Badge>WordCloud</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/Amazon-Sentiment-Analysis" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Twitter Sentiment Analysis</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Analyzes tweets (positive/neutral/negative) using VADER; visualizes public sentiment trends.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>NLTK</Badge><Badge>VADER</Badge><Badge>Pandas</Badge><Badge>Matplotlib</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/twitter-sentiment-app" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Bride Belle – E-Commerce Android App</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Android app for bridal/groom accessories with auth, product listing, cart & orders. 🏆 1st Prize (KPCode4u).
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Android Studio</Badge><Badge>Java</Badge><Badge>Firebase</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/Bride-Belle" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Career Catalyst Website</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Student-centric career guidance website with interactive UI and curated resources.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>HTML</Badge><Badge>CSS</Badge><Badge>JavaScript</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/Career-Catalyst" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">MedAlert AI (Concept)</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          AI-powered early disease detection & emergency alerts; focused on preventive healthcare.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>ML/DL</Badge><Badge>Flask</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/medalert-ai" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Three Stair Agriculture (Concept)</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Sustainable AI + IoT three-level farming with yield prediction & optimized rotation.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>AI</Badge><Badge>IoT</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/three-stair-agriculture" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">Webcam Spyware Security Tool</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Detects & prevents unauthorized webcam access with logs, auth, and PDF reporting.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Python</Badge><Badge>Tkinter</Badge><Badge>SQLite</Badge><Badge>ReportLab</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/KadiyalaKomali/Webcam-Spyware-Security" target="_blank">View Project</a>
+      </div>
+
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft flex flex-col">
+        <h3 class="font-bold text-lg">APSCSCL Hackathon 2025 – CCTV Intelligence</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Real-time CCTV analysis with YOLOv5, OCR, Speech-to-Text and LLM-powered querying. Streamlit dashboard & FastAPI backend.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <Badge>Streamlit</Badge><Badge>FastAPI</Badge><Badge>PostgreSQL</Badge><Badge>YOLOv5</Badge><Badge>OCR</Badge><Badge>LLMs</Badge><Badge>Docker</Badge>
+        </div>
+        <a class="mt-4 inline-block px-4 py-2 rounded-lg border hover:bg-gray-50 dark:hover:bg-gray-800 transition text-sm" href="https://github.com/your-username/apscscl-cctv" target="_blank">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="py-12 px-5 bg-indigo-700">
+  <h2 class="text-3xl font-semibold mb-8 text-center text-white">Certificates</h2>
+
+  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    
+    <!-- NPTEL IoT -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="nptel.jpeg" alt="NPTEL IoT" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">NPTEL: Internet of Things</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">NPTEL • 2024</p>
+        </div>
+      </div>
+      <a href="npteliot.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="cp.png" alt="Infosys Springboard" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">LearnTube: Introduction to C Programming</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">LearnTube • 2024</p>
+        </div>
+      </div>
+      <a href="cpcertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+    <!-- Infosys Springboard -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="infosysspringboard.png" alt="Infosys Springboard" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Infosys Springboard: Basics of Natural Language Processing</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Infosys Springboard • 2024</p>
+        </div>
+      </div>
+      <a href="basicsofnlp.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+    <!-- Infosys Springboard -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="infosysspringboard.png" alt="Infosys Springboard" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Infosys Springboard:Introduction to  Artificial Intelligence</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Infosys Springboard • 2024</p>
+        </div>
+      </div>
+      <a href="introtoai.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+    <!-- Infosys Springboard -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="infosysspringboard.png" alt="Infosys Springboard" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Basics of Python</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Infosys Springboard • 2024</p>
+        </div>
+      </div>
+      <a href="basicsofpython.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+    <!-- edX Data Science -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="edx.png" alt="edX" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">EDX: Data Science with Python</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">edX • 2024</p>
+        </div>
+      </div>
+      <a href="edxcertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="cybersecurity.jpeg" alt="Infosys Springboard" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Cisco: Introduction to Cyber Security</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Cisco • 2024</p>
+        </div>
+      </div>
+      <a href="introtocscertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+    <!-- MongoDB University -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="mongodb.png" alt="MongoDB University" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">MongoDB University: Intro to MongoDB</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">MongoDB University • 2024</p>
+        </div>
+      </div>
+      <a href="MONGODB CERTIFICATE.pdf" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+    <!-- Supraja Technologies -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="spraja technologies.png" alt="Supraja Technologies" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Supraja Technologies: Cybersecurity + Internship</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Supraja Technologies • 2024</p>
+        </div>
+      </div>
+      <a href="cscertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      <a href="csinternshipoffer.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Internship Offer Letter</a>
+    </div>
+
+    <!-- Sololearn -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="sololearn.png" alt="Sololearn" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Sololearn: HTML & CSS</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Sololearn • 2023</p>
+        </div>
+      </div>
+      <a href="sololearncertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+    <!-- KPCode4U -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="androidstudio.png" alt="KPCode4U" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">KPCode4U: Merit Certificate</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">KPCode4U • 2023</p>
+        </div>
+      </div>
+      <a href="androidcertiificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+    <!-- Data Valley -->
+    <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+      <div class="flex items-center gap-4">
+        <img src="datavalleyai.png" alt="Data Valley" class="w-14 h-14 object-contain">
+        <div>
+          <h3 class="font-bold text-lg">Data Valley: Data Analytics with AI</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Data Valley • 2024</p>
+        </div>
+      </div>
+      <a href="datavalleycertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+    <!-- Extra Curricular Certificates (expandable) -->
+    <div class="max-w-6xl mx-auto mt-8">
+  <details class="group bg-indigo-800 rounded-xl p-4">
+    <summary class="cursor-pointer list-none flex items-center justify-between">
+      <span class="text-white text-lg font-semibold">Extra Curricular Certificates</span>
+      <span class="text-white group-open:rotate-180 transition">⌄</span>
+    </summary>
+
+    <!-- Grid Layout -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-6">
+
+      <!-- Poster Presentation -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Poster Presentation" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Poster Presentation</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">World Environment Day • 2023</p>
+          </div>
+        </div>
+        <a href="poster-presentation.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- Technical Contest -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Technical Contest" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Technical Contest</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">YuvaTarang • 2023</p>
+          </div>
+        </div>
+        <a href="technical-contest.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- Painting -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Painting" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Painting</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">International Women Day • 2023</p>
+          </div>
+        </div>
+        <a href="painting.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- Tech Trek -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="vvit.png" alt="Tech Trek" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Tech Trek</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">VVIT Spardha 2K23 • 2023</p>
+          </div>
+        </div>
+        <a href="techtrek.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- Har Ghar Tiranga -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Har Ghar Tiranga" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Har Ghar Tiranga</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Azadhi ka Amruth Mahothsav • 2024</p>
+          </div>
+        </div>
+        <a href="tiranga.png" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+      <!-- Har Ghar Tiranga -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Har Ghar Tiranga" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Mystery Quiz</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">JNTUN • 2024</p>
+          </div>
+        </div>
+        <a href="tiranga.png" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+      <!-- Project Expo -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Project Expo" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Project Expo</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Jubilation 2K24 • 2024</p>
+          </div>
+        </div>
+        <a href="projectexpo.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- Web Design -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Web Design" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Web Design</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Jubilation 2K24 • 2024</p>
+          </div>
+        </div>
+        <a href="webdesign.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- Vikasit Bharath -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="Vikasit Bharath" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">Vikasit Bharath</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">MyGOV • 2024</p>
+          </div>
+        </div>
+        <a href="vikasit.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+      <!-- IDE BootCamp Phase II -->
+      <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-soft">
+        <div class="flex items-center gap-4">
+          <img src="nec.jpeg" alt="IDE BootCamp" class="w-14 h-14 object-contain">
+          <div>
+            <h3 class="font-bold text-lg">IDE BootCamp Phase II</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">R.V.R&J.C Engineering College • 2024</p>
+          </div>
+        </div>
+        <a href="bootcampcertificate.jpg" target="_blank" class="mt-3 inline-block text-indigo-600 hover:underline text-sm">View Certificate</a>
+      </div>
+
+    </div>
+  </details>
+</div>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-12 px-5">
+  <h2 class="text-3xl font-semibold text-center mb-8">Achievements</h2>
+  
+  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
+        Chairman – ACM Student Chapter,Narasaraopeta Engineering College
+      </h3>
+    </div>
+
+    <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
+        1st Prize – Android Hackathon (KPCode4U)
+      </h3>
+    </div>
+
+    <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
+        1st Prize – CodeChariot Hackathon (DataValley)
+      </h3>
+    </div>
+
+    <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
+        Finalist – APSCSCL Hackathon 2025
+      </h3>
+    </div>
+
+    <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
+        Internship Offer – Supraja Cybersecurity Hackathon
+      </h3>
+    </div>
+
+    <div class="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
+        Idea Pitch – Career Catalyst (IDE Bootcamp Phase II)
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Activities -->
+  <section id="activities" class="py-12 px-5 bg-gray-50 dark:bg-gray-900">
+    <h2 class="text-3xl font-semibold text-center mb-8">Extra Curricular Activities</h2>
+    <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-2">
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-800 dark:border-gray-700 shadow-soft">
+        <h3 class="font-bold">Clubs & Memberships</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Women’s Club • Literature Club • Dance Club • NSS</p>
+      </div>
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-800 dark:border-gray-700 shadow-soft">
+        <h3 class="font-bold">Participation</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Poster Design • Painting • Mehendi • Cooking Without Fire</p>
+      </div>
+      <div class="p-6 rounded-xl border bg-white dark:bg-gray-800 dark:border-gray-700 shadow-soft md:col-span-2">
+        <h3 class="font-bold">Interests</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Yoga • Creativity • Public Speaking</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 px-5 text-center">
+    <h2 class="text-3xl font-semibold mb-2">Get in Touch</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-6">I’m open to internships, full-time roles, and collaborations.</p>
+
+    <p class="mb-2">Email:
+      <a href="mailto:komalikadiyala17@gmail.com" class="text-indigo-600 underline">
+        komalikadiyala17@gmail.com
+      </a>
+    </p>
+    <p class="mb-6">
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/komali-kadiyala-ainrtec22471a4325/" class="text-indigo-600 underline">Click Me to Connect</a>
+      <!-- TODO: Add LinkedIn -->
+      • GitHub:
+      <a href="https://github.com/KadiyalaKomali" class="text-indigo-600 underline">Click Me to Work</a>
+      <!-- TODO: Add GitHub -->
+    </p>
+  
+  <section id="contact" class="py-12 px-5">
+  <h2 class="text-3xl font-semibold text-center mb-8">Contact Me</h2>
+  <div class="max-w-xl mx-auto">
+    <form id="contact-form" class="space-y-5 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+      <input 
+        type="text" 
+        name="user_name" 
+        placeholder="Your Name" 
+        required 
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <input 
+        type="email" 
+        name="user_email" 
+        placeholder="Your Email" 
+        required 
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <textarea 
+        name="message" 
+        rows="5" 
+        placeholder="Your Message" 
+        required 
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      ></textarea>
+      <button 
+        type="submit" 
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        Send Message
+      </button>
+    </form>
+    <p id="form-status" class="mt-4 text-center text-sm"></p>
+  </div>
+</section>
+
+
+    <!-- Mailto contact form -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("g9VtnoAgKIqTGWqNt"); // Replace with your EmailJS Public Key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_07102003", "template_07102003", this)
+      .then(() => {
+        document.getElementById("form-status").innerText = "✅ Message Sent Successfully!";
+        this.reset();
+      }, (error) => {
+        document.getElementById("form-status").innerText = "❌ Failed to send. Try again!";
+        console.error("EmailJS Error:", error);
+      });
+  });
+</script>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 dark:bg-gray-900 text-center text-sm py-5">
+    &copy; 2025 Kadiyala Komali. Built with ❤️ by Komali Kadiyala.
+  </footer>
+
+  <!-- Small helpers: pseudo-components using HTML + Tailwind -->
+  <template id="skill-template">
+    <div class="p-3 rounded-lg border bg-white dark:bg-gray-900 dark:border-gray-800 shadow-soft tilt">
+      <div class="tilt-child flex flex-col items-center gap-2">
+        <img class="w-10 h-10" alt="">
+        <p class="text-xs leading-tight"></p>
+      </div>
+    </div>
+  </template>
+
+  <template id="badge-template">
+    <span class="px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-200 border border-indigo-200 dark:border-indigo-800"></span>
+  </template>
+
+  <template id="cert-template">
+    <div class="bg-indigo-800 p-6 rounded-xl shadow-lg flex items-start gap-4">
+      <img class="w-12 h-12" alt="Certificate">
+      <div>
+        <h3 class="text-lg font-bold text-white cert-title"></h3>
+        <p class="text-white text-sm cert-issuer"></p>
+        <p class="text-indigo-200 text-xs cert-year"></p>
+      </div>
+    </div>
+  </template>
+
+  <template id="timeline-item-template">
+    <div class="flex items-start gap-3">
+      <div class="mt-1 size-3 rounded-full bg-indigo-600"></div>
+      <p class="text-sm"></p>
+    </div>
+  </template>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Mailto body builder
+    const form = document.querySelector('form[action^="mailto:"]');
+    form?.addEventListener('submit', (e) => {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(msg)}`;
+      document.getElementById('mailtoBody').value = body;
+    });
+
+    // Tiny "component" helpers
+    function Skill({icon, label}) {
+      const tpl = document.getElementById('skill-template');
+      const node = tpl.content.cloneNode(true);
+      node.querySelector('img').src = icon;
+      node.querySelector('img').alt = label;
+      node.querySelector('p').textContent = label;
+      return node;
+    }
+    function Badge(text) {
+      const tpl = document.getElementById('badge-template');
+      const node = tpl.content.cloneNode(true);
+      node.querySelector('span').textContent = text;
+      return node;
+    }
+    function Cert({title, issuer, year, img}) {
+      const tpl = document.getElementById('cert-template');
+      const node = tpl.content.cloneNode(true);
+      node.querySelector('img').src = img;
+      node.querySelector('.cert-title').textContent = title;
+      node.querySelector('.cert-issuer').textContent = issuer;
+      node.querySelector('.cert-year').textContent = year;
+      return node;
+    }
+    function TimelineItem({title}) {
+      const tpl = document.getElementById('timeline-item-template');
+      const node = tpl.content.cloneNode(true);
+      node.querySelector('p').textContent = title;
+      return node;
+    }
+
+    // Polyfill tags usage in static HTML (so we can write <Skill> etc.)
+    function hydrateCustomTags() {
+      const skills = document.querySelectorAll('Skill');
+      skills.forEach(el => {
+        const icon = el.getAttribute('icon');
+        const label = el.getAttribute('label');
+        el.replaceWith(Skill({icon, label}));
+      });
+
+      const badges = document.querySelectorAll('Badge');
+      badges.forEach(el => {
+        const text = el.textContent.trim();
+        el.replaceWith(Badge(text));
+      });
+
+      const certs = document.querySelectorAll('Cert');
+      certs.forEach(el => {
+        el.replaceWith(Cert({
+          title: el.getAttribute('title'),
+          issuer: el.getAttribute('issuer'),
+          year: el.getAttribute('year'),
+          img: el.getAttribute('img')
+        }));
+      });
+
+      const timeline = document.querySelectorAll('TimelineItem');
+      timeline.forEach(el => {
+        el.replaceWith(TimelineItem({title: el.getAttribute('title')}));
+      });
+    }
+    hydrateCustomTags();
+  </script>
+</body>
+</html>
